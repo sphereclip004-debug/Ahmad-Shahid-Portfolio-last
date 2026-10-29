@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d18">
+  <meta name="description" content="Portfolio, education, skills, projects, and contact information.">
+  <title>Ahmed Shahid — Portfolio</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="/assets/js/main.js" defer></script>
+</head>
+<body data-theme="dark">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Ahmed Shahid home"><span class="brand-mark">AS</span><span id="brand-name">Ahmed Shahid</span><span class="brand-period">.</span></a>
+      <button class="icon-button menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"><span></span><span></span><span></span></button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#reviews">Reviews</a><a href="#contact" class="nav-contact">Contact <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button class="theme-toggle icon-button" id="theme-toggle" aria-label="Switch to light theme" title="Switch theme"><span aria-hidden="true">☼</span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" id="home">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div><div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="eyebrow-line"></span><span id="hero-eyebrow">PORTFOLIO &amp; SELECTED WORK</span></p>
+          <h1><span id="hero-intro">Hello, I'm Ahmed Shahid.</span><br><span class="gradient-text" id="hero-tagline">Building thoughtful digital experiences</span></h1>
+          <p class="hero-description" id="hero-description">A place to share a professional journey, ideas, and work. Explore the sections below, or get in touch.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="/api/public/cv.pdf" download>Download CV <span aria-hidden="true">↓</span></a></div>
+          <div class="hero-social-row"><button class="text-action" id="copy-email"><span class="action-icon" aria-hidden="true">▣</span> Copy email</button><span class="social-dot"></span><span class="subtle-text" id="hero-location">Open to meaningful connections</span></div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="portrait-orbit orbit-one"></div><div class="portrait-orbit orbit-two"></div>
+          <div class="portrait-frame"><img id="profile-image" src="/api/public/profile-image" alt="Professional profile portrait of Ahmed Shahid" width="720" height="720"></div>
+          <div class="portrait-label"><span class="status-dot"></span><span>Personal portfolio</span></div>
+          <div class="floating-note note-top"><span class="note-symbol">✳</span><span><strong>Ideas to impact</strong><small>Thoughtful by design</small></span></div>
+          <div class="floating-note note-bottom"><span class="note-symbol note-symbol-blue">↗</span><span><strong>Explore the work</strong><small>Projects &amp; experience</small></span></div>
+        </div>
+      </div>
+      <div class="hero-bottom-line container"><span>SCROLL TO EXPLORE</span><span class="scroll-line"><i></i></span><span>01 — 08</span></div>
+    </section>
+
+    <section class="section section-about" id="about">
+      <div class="container section-grid">
+        <div class="section-intro reveal"><p class="eyebrow"><span class="eyebrow-line"></span> A LITTLE ABOUT ME</p><h2>Curiosity first.<br><span class="gradient-text">Purpose always.</span></h2><p class="section-lead">Every good project starts with a question and gets better with care.</p></div>
+        <div class="about-copy reveal"><span class="section-number">01 / ABOUT</span><p id="about-text">This portfolio is ready for verified biography details, skills, and project work. Use the Admin dashboard to personalize this section.</p><div class="about-signature"><span class="signature-mark">AS</span><span><strong id="about-name">Ahmed Shahid</strong><small>Portfolio &amp; professional profile</small></span></div></div>
+      </div>
+    </section>
+
+    <section class="section section-education" id="education">
+      <div class="container"><div class="section-heading reveal"><div><p class="eyebrow"><span class="eyebrow-line"></span> THE FOUNDATION</p><h2>Education &amp; <span class="gradient-text">growth</span></h2></div><span class="section-number">02 / EDUCATION</span></div><div id="education-list" class="timeline-list"><div class="empty-state">Education details are loading…</div></div></div>
+    </section>
+
+    <section class="section section-skills" id="skills">
+      <div class="container"><div class="section-heading reveal"><div><p class="eyebrow"><span class="eyebrow-line"></span> TOOLS &amp; STRENGTHS</p><h2>Skills that <span class="gradient-text">keep growing</span></h2></div><span class="section-number">03 / SKILLS</span></div>
+        <div class="skills-toolbar reveal"><label class="search-box"><span aria-hidden="true">⌕</span><input id="skill-search" type="search" placeholder="Search skills…" aria-label="Search skills"></label><div class="filter-row" id="skill-filters"><button class="filter-chip active" data-category="all">All skills</button></div></div>
+        <div id="skills-grid" class="skills-grid"><div class="empty-state">Skills are loading…</div></div>
+        <div class="ticker-wrap" aria-label="Skills ticker"><div class="ticker-track" id="skills-ticker"><span>Curiosity</span><b>✳</b><span>Problem solving</span><b>✳</b><span>Continuous learning</span><b>✳</b><span>Curiosity</span><b>✳</b><span>Problem solving</span><b>✳</b><span>Continuous learning</span><b>✳</b></div></div>
+      </div>
+    </section>
+
+    <section class="section section-services" id="services">
+      <div class="container"><div class="section-heading reveal"><div><p class="eyebrow"><span class="eyebrow-line"></span> HOW I CAN HELP</p><h2>Thoughtful work.<br><span class="gradient-text">Useful outcomes.</span></h2></div><span class="section-number">04 / SERVICES</span></div><div id="services-grid" class="services-grid"><div class="empty-state">Services are loading…</div></div></div>
+    </section>
+
+    <section class="section section-projects" id="projects">
+      <div class="container"><div class="section-heading reveal"><div><p class="eyebrow"><span class="eyebrow-line"></span> SELECTED WORK</p><h2>Some things I've <span class="gradient-text">worked on</span></h2><p class="section-lead">A collection of projects, experiments, and ideas.</p></div><span class="section-number">05 / PROJECTS</span></div>
+        <div class="project-toolbar reveal"><div class="filter-row" id="project-filters"><button class="filter-chip active" data-category="all">All projects</button></div><span id="project-count" class="subtle-text"></span></div><div id="projects-grid" class="projects-grid"><div class="empty-state">Projects are loading…</div></div>
+      </div>
+    </section>
+
+    <section class="section section-reviews" id="reviews">
+      <div class="container"><div class="section-heading reveal"><div><p class="eyebrow"><span class="eyebrow-line"></span> KIND WORDS</p><h2>Feedback &amp; <span class="gradient-text">reviews</span></h2></div><span class="section-number">06 / REVIEWS</span></div>
+        <div id="reviews-grid" class="reviews-grid"><div class="empty-state">Reviews are loading…</div></div>
+        <div class="review-cta reveal"><div><h3>Worked together?</h3><p>Your feedback is welcome. Every submission is reviewed before it appears publicly.</p></div><a href="#leave-review" class="button button-secondary">Leave a review <span aria-hidden="true">↗</span></a></div>
+        <form id="review-form" class="form-card reveal"><div class="form-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> YOUR FEEDBACK</p><h3 id="leave-review">Leave a review</h3></div><p class="subtle-text">Your review will be published after approval.</p></div><div class="form-grid"><label>Your name<input name="name" required maxlength="100" placeholder="Name"></label><label>Role or relationship <span class="optional">Optional</span><input name="role" maxlength="120" placeholder="e.g. Project collaborator"></label><label class="full-width">Rating<select name="rating" required><option value="5">★★★★★ — Excellent</option><option value="4">★★★★☆ — Very good</option><option value="3">★★★☆☆ — Good</option><option value="2">★★☆☆☆ — Fair</option><option value="1">★☆☆☆☆ — Needs work</option></select></label><label class="full-width">Your review<textarea name="message" required minlength="8" maxlength="1500" rows="4" placeholder="Share a few words…"></textarea></label><input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"></div><div class="form-footer"><button class="button button-primary" type="submit">Submit review <span aria-hidden="true">↗</span></button><p class="form-message" id="review-message" role="status" aria-live="polite"></p></div></form>
+      </div>
+    </section>
+
+    <section class="section section-contact" id="contact">
+      <div class="container contact-grid"><div class="contact-copy reveal"><p class="eyebrow"><span class="eyebrow-line"></span> LET'S CONNECT</p><h2>Have a good idea?<br><span class="gradient-text">Let's talk.</span></h2><p class="section-lead">Send a message with a question, a project idea, or simply to say hello.</p><div class="contact-details" id="contact-details"><p class="subtle-text">Contact details can be added from the Admin dashboard.</p></div><div class="contact-orbit" aria-hidden="true"><span>✳</span></div></div>
+        <form id="contact-form" class="contact-form reveal"><div class="form-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> SEND A MESSAGE</p><h3>Start a conversation</h3></div></div><label>Your name<input name="name" required maxlength="120" placeholder="Your name"></label><label>Email address<input name="email" type="email" required maxlength="254" placeholder="you@example.com"></label><label>Subject <span class="optional">Optional</span><input name="subject" maxlength="180" placeholder="What is this about?"></label><label>Message<textarea name="message" required minlength="5" maxlength="5000" rows="5" placeholder="Tell me a little about it…"></textarea></label><input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><div class="form-footer"><button class="button button-primary" type="submit">Send message <span aria-hidden="true">↗</span></button><p class="form-message" id="contact-message" role="status" aria-live="polite"></p></div><p class="privacy-note">Messages are stored privately for follow-up and are only visible to the administrator.</p></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-top"><a class="brand" href="#home"><span class="brand-mark">AS</span><span id="footer-name">Ahmed Shahid</span><span class="brand-period">.</span></a><p id="footer-copy">Designed with care · Ahmed Shahid</p><a class="back-top" href="#home">Back to top ↑</a></div><div class="container footer-bottom"><span>© <span id="footer-year"></span> <span id="copyright-name">Ahmed Shahid</span>. All rights reserved.</span><div class="footer-links"><a href="#about">About</a><a href="#projects">Work</a><a href="#contact">Contact</a><a class="admin-entry" href="/admin">Admin</a></div></div></footer>
+
+  <button class="chat-fab" id="chat-fab" aria-label="Open contact helper" aria-expanded="false"><span aria-hidden="true">✳</span></button>
+  <aside class="chat-panel" id="chat-panel" aria-label="Contact helper" hidden><div class="chat-panel-head"><div><span class="status-dot"></span><strong>Quick hello</strong></div><button id="chat-close" class="icon-button" aria-label="Close">×</button></div><p>Have a question or idea? Use the contact form and send a note.</p><a class="button button-primary button-wide" href="#contact" id="chat-contact-link">Go to contact form ↗</a></aside>
+  <button class="back-top-floating" id="back-top-floating" aria-label="Back to top">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

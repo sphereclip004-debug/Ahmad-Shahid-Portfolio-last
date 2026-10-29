@@ -1,0 +1,80 @@
+{
+  "name": "Portfolio - New review notification",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "portfolio-review-notification",
+        "authentication": "headerAuth",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "webhook-portfolio-review-notification",
+      "name": "Authenticated Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -360,
+        0
+      ],
+      "webhookId": "portfolio-review-notification-webhook"
+    },
+    {
+      "parameters": {
+        "fromEmail": "={{$env.PORTFOLIO_NOTIFY_FROM}}",
+        "toEmail": "={{$env.PORTFOLIO_NOTIFY_EMAIL}}",
+        "subject": "New portfolio review awaiting moderation",
+        "emailFormat": "text",
+        "text": "={{'A review is waiting for approval.\\n\\nReviewer: ' + $json.body.data.name + '\\nRole: ' + ($json.body.data.role || '(not supplied)') + '\\nRating: ' + $json.body.data.rating + '/5\\n\\nReview:\\n' + $json.body.data.message + '\\n\\nEvent ID: ' + $json.body.event_id}}",
+        "options": {}
+      },
+      "id": "email-portfolio-review-notification",
+      "name": "Email notification",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        -80,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Setup\n1. Create an n8n Header Auth credential for the webhook.\n2. Set header name `X-Portfolio-Token` and its value to the same `N8N_WEBHOOK_TOKEN` configured in the Python backend.\n3. Add an SMTP credential to the Email notification node.\n4. Set n8n environment variables `PORTFOLIO_NOTIFY_FROM` and `PORTFOLIO_NOTIFY_EMAIL`.\n5. Activate this workflow and put its production webhook URL in the matching backend environment variable.",
+        "height": 280,
+        "width": 350
+      },
+      "id": "note-portfolio-review-notification",
+      "name": "Setup instructions",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        180
+      ]
+    }
+  ],
+  "connections": {
+    "Authenticated Webhook": {
+      "main": [
+        [
+          {
+            "node": "Email notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "saveExecutionProgress": true
+  },
+  "versionId": "portfolio-review-notification-initial",
+  "meta": {
+    "templateCredsSetupCompleted": false
+  },
+  "tags": []
+}

@@ -1,0 +1,1 @@
+`profile-placeholder.webp` is a generated generic illustrative portrait made for this project. It is not presented as a verified photo of Ahmed Shahid or Ahmed Chai. Replace it from the Admin dashboard with an approved photograph when available.

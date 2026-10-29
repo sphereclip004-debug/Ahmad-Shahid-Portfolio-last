@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Admin dashboard — Ahmed Shahid Portfolio</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/admin.css">
+  <script src="/assets/js/admin.js" defer></script>
+</head>
+<body class="admin-body" data-theme="dark">
+  <main id="login-screen" class="login-screen">
+    <a class="brand login-brand" href="/"><span class="brand-mark">AS</span><span>Ahmed Shahid</span><span class="brand-period">.</span></a>
+    <div class="login-card">
+      <div class="login-icon">AS</div><p class="eyebrow"><span class="eyebrow-line"></span> PRIVATE AREA</p>
+      <h1>Welcome back.</h1><p class="login-subtitle">Sign in to manage your portfolio, CV, and submissions.</p>
+      <form id="login-form" class="admin-form">
+        <label>Username<input name="username" required maxlength="80" autocomplete="username" placeholder="Administrator username"></label>
+        <label>Password<input name="password" type="password" required maxlength="256" autocomplete="current-password" placeholder="Your password"></label>
+        <button type="submit" class="button button-primary button-wide">Sign in <span aria-hidden="true">↗</span></button>
+        <p class="admin-message" id="login-message" role="status" aria-live="polite"></p>
+      </form>
+      <p class="login-footnote">Administrator accounts are created from the server terminal. Public visitors cannot register.</p>
+    </div><a class="back-public" href="/">← Return to portfolio</a>
+  </main>
+
+  <div id="dashboard-screen" class="admin-shell" hidden>
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <a class="brand admin-brand" href="/"><span class="brand-mark">AS</span><span>Portfolio Admin</span></a>
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav id="admin-nav" class="admin-nav" aria-label="Admin sections">
+        <button class="admin-nav-item active" data-tab="overview"><span>◫</span> Overview</button>
+        <button class="admin-nav-item" data-tab="settings"><span>⚙</span> Site settings</button>
+        <div class="sidebar-label nav-group-label">PORTFOLIO CONTENT</div>
+        <button class="admin-nav-item" data-tab="education"><span>⌂</span> Education</button>
+        <button class="admin-nav-item" data-tab="skills"><span>✳</span> Skills</button>
+        <button class="admin-nav-item" data-tab="services"><span>◈</span> Services</button>
+        <button class="admin-nav-item" data-tab="projects"><span>▣</span> Projects</button>
+        <button class="admin-nav-item" data-tab="reviews"><span>☆</span> Reviews <b id="pending-count" class="nav-badge" hidden>0</b></button>
+        <div class="sidebar-label nav-group-label">PROFILE &amp; INBOX</div>
+        <button class="admin-nav-item" data-tab="cv"><span>▤</span> CV &amp; profile image</button>
+        <button class="admin-nav-item" data-tab="messages"><span>✉</span> Contact messages <b id="unread-count" class="nav-badge" hidden>0</b></button>
+        <button class="admin-nav-item" data-tab="audit"><span>◷</span> Audit log</button>
+      </nav>
+      <div class="sidebar-bottom"><div class="admin-user-mark">A</div><div class="admin-user-meta"><strong id="sidebar-username">Administrator</strong><small>Portfolio manager</small></div><button id="logout-button" class="logout-button" title="Sign out" aria-label="Sign out">↪</button></div>
+    </aside>
+
+    <section class="admin-main">
+      <header class="admin-topbar"><div class="topbar-left"><button class="icon-button sidebar-toggle" id="sidebar-toggle" aria-label="Open admin menu">☰</button><div><p class="topbar-overline">ADMINISTRATOR WORKSPACE</p><h1 id="view-title">Overview</h1></div></div><div class="topbar-actions"><a class="button button-secondary small-button" href="/" target="_blank" rel="noopener noreferrer">View website ↗</a><span class="admin-status"><i></i> Session secured</span></div></header>
+      <div id="admin-notice" class="admin-notice" role="status" aria-live="polite"></div>
+      <div class="admin-content" id="admin-content"><div class="loading-panel">Loading your workspace…</div></div>
+    </section>
+  </div>
+
+  <div id="editor-modal" class="modal-backdrop" hidden>
+    <section class="editor-modal" role="dialog" aria-modal="true" aria-labelledby="editor-title">
+      <div class="modal-header"><div><p class="eyebrow"><span class="eyebrow-line"></span> CONTENT EDITOR</p><h2 id="editor-title">Edit item</h2></div><button type="button" id="modal-close" class="icon-button" aria-label="Close editor">×</button></div>
+      <form id="content-editor-form" class="admin-form"><div id="editor-fields" class="editor-fields"></div><div class="editor-options"><label class="admin-checkbox"><input type="checkbox" name="published" checked> Published on public website</label><label class="order-label">Display order<input type="number" name="sort_order" min="-100000" max="100000" value="0"></label><label id="moderation-field" hidden>Review status<select name="moderation_status"><option value="pending">Pending approval</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></label></div><p id="editor-message" class="admin-message" role="status"></p><div class="modal-actions"><button type="button" id="modal-cancel" class="button button-secondary">Cancel</button><button type="submit" class="button button-primary">Save changes ↗</button></div></form>
+    </section>
+  </div>
+  <div id="admin-toast" class="admin-toast" role="status" aria-live="polite"></div>
+</body>
+</html>
